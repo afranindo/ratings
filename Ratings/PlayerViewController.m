@@ -8,6 +8,7 @@
 
 #import "PlayerViewController.h"
 #import "Player.h"
+#import "PlayerCell.h"
 
 @interface PlayerViewController ()
 
@@ -73,19 +74,40 @@
 	return nil;
 }
 
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    UITableViewCell *cell = [tableView
+//                             dequeueReusableCellWithIdentifier:@"PlayerCell"];
+//	Player *player = [self.players objectAtIndex:indexPath.row];
+//	UILabel *nameLabel = (UILabel *)[cell viewWithTag:100];
+//	nameLabel.text = player.name;
+//	UILabel *gameLabel = (UILabel *)[cell viewWithTag:101];
+//	gameLabel.text = player.name;
+//	UIImageView * ratingImageView = (UIImageView *)
+//    [cell viewWithTag:102];
+//	ratingImageView.image = [self imageForRating:player.rating];
+//    return cell;}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView
-                             dequeueReusableCellWithIdentifier:@"PlayerCell"];
+	PlayerCell *cell = (PlayerCell *)[tableView
+                                      dequeueReusableCellWithIdentifier:@"PlayerCell"];
 	Player *player = [self.players objectAtIndex:indexPath.row];
-	UILabel *nameLabel = (UILabel *)[cell viewWithTag:100];
-	nameLabel.text = player.name;
-	UILabel *gameLabel = (UILabel *)[cell viewWithTag:101];
-	gameLabel.text = player.name;
-	UIImageView * ratingImageView = (UIImageView *)
-    [cell viewWithTag:102];
-	ratingImageView.image = [self imageForRating:player.rating];
-    return cell;}
+	cell.nameLabel.text = player.name;
+	cell.gameLabel.text = player.game;
+	cell.ratingImageView.image = [self
+                                  imageForRating:player.rating];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	if (editingStyle == UITableViewCellEditingStyleDelete)
+	{
+		[self.players removeObjectAtIndex:indexPath.row];
+		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+	}
+}
 
 /*
  // Override to support conditional editing of the table view.

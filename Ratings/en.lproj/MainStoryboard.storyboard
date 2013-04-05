@@ -47,7 +47,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCell" rowHeight="55" id="514-YG-YtD">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCell" rowHeight="55" id="514-YG-YtD" customClass="PlayerCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -91,6 +91,11 @@
                                     <constraint firstItem="SmE-7M-qPZ" firstAttribute="leading" secondItem="ek0-kh-xvk" secondAttribute="leading" type="default" id="mI3-q5-Rbv"/>
                                     <constraint firstItem="jQl-d9-26U" firstAttribute="top" secondItem="514-YG-YtD" secondAttribute="top" constant="13" id="ufa-B1-gio"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="gameLabel" destination="ek0-kh-xvk" id="59q-FJ-DmD"/>
+                                    <outlet property="nameLabel" destination="SmE-7M-qPZ" id="HfY-pD-ACf"/>
+                                    <outlet property="ratingImageView" destination="jQl-d9-26U" id="cde-CP-gOU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -131,6 +136,14 @@
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PlayerCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayerCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="gameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="ratingImageView" candidateClass="UIImageView"/>
+            </relationships>
         </class>
         <class className="PlayerViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayerViewController.h"/>

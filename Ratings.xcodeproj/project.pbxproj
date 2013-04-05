@@ -31,6 +31,7 @@
 		7D955BD217005B7F00C99920 /* Gestures@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D955BBA17005B7F00C99920 /* Gestures@2x.png */; };
 		7D955BD317005B7F00C99920 /* Players.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D955BBB17005B7F00C99920 /* Players.png */; };
 		7D955BD417005B7F00C99920 /* Players@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D955BBC17005B7F00C99920 /* Players@2x.png */; };
+		7D9681BF170D3DAD00781291 /* PlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D9681BE170D3DAD00781291 /* PlayerCell.m */; };
 		7D96E1111702C67B0078018D /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D96E1101702C67B0078018D /* PlayerViewController.m */; };
 		7D96E1141702C74C0078018D /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D96E1131702C74C0078018D /* Player.m */; };
 		7DADEFA016E6FE5E005DBC09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DADEF9F16E6FE5E005DBC09 /* UIKit.framework */; };
@@ -71,6 +72,8 @@
 		7D955BBA17005B7F00C99920 /* Gestures@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gestures@2x.png"; sourceTree = "<group>"; };
 		7D955BBB17005B7F00C99920 /* Players.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Players.png; sourceTree = "<group>"; };
 		7D955BBC17005B7F00C99920 /* Players@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Players@2x.png"; sourceTree = "<group>"; };
+		7D9681BD170D3DAD00781291 /* PlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerCell.h; sourceTree = "<group>"; };
+		7D9681BE170D3DAD00781291 /* PlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerCell.m; sourceTree = "<group>"; };
 		7D96E10F1702C67B0078018D /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		7D96E1101702C67B0078018D /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		7D96E1121702C74C0078018D /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
@@ -171,14 +174,16 @@
 				7D955BA417005B7F00C99920 /* Images */,
 				7DADEFAE16E6FE5E005DBC09 /* AppDelegate.h */,
 				7DADEFAF16E6FE5E005DBC09 /* AppDelegate.m */,
+				7D96E1121702C74C0078018D /* Player.h */,
+				7D96E1131702C74C0078018D /* Player.m */,
 				7DADEFB716E6FE5E005DBC09 /* MainStoryboard.storyboard */,
 				7DADEFBA16E6FE5E005DBC09 /* ViewController.h */,
 				7DADEFBB16E6FE5E005DBC09 /* ViewController.m */,
 				7D96E10F1702C67B0078018D /* PlayerViewController.h */,
 				7D96E1101702C67B0078018D /* PlayerViewController.m */,
 				7DADEFA616E6FE5E005DBC09 /* Supporting Files */,
-				7D96E1121702C74C0078018D /* Player.h */,
-				7D96E1131702C74C0078018D /* Player.m */,
+				7D9681BD170D3DAD00781291 /* PlayerCell.h */,
+				7D9681BE170D3DAD00781291 /* PlayerCell.m */,
 			);
 			path = Ratings;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 				7DADEFBC16E6FE5E005DBC09 /* ViewController.m in Sources */,
 				7D96E1111702C67B0078018D /* PlayerViewController.m in Sources */,
 				7D96E1141702C74C0078018D /* Player.m in Sources */,
+				7D9681BF170D3DAD00781291 /* PlayerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
